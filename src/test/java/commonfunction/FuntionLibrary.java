@@ -1,8 +1,6 @@
 package commonfunction;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -64,8 +62,9 @@ public class FuntionLibrary
 	}
 	public static void clickAction(String LocatorType,String LocatorValue) 
 	{
-		if(LocatorType.equalsIgnoreCase("xpath")) {
-			driver.findElement(By.xpath(LocatorValue)).click();
+		if(LocatorType.equalsIgnoreCase("name"))
+		{
+			driver.findElement(By.name(LocatorValue)).click();
 		}
 	}
 	public static void validateTitle(String Expected_Title)
